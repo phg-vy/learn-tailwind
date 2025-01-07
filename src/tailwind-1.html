@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="flex place-content-center items-center w-screen h-screen">
+    <form class="border w-1/2 p-5 rounded-2xl shadow-lg">
+      <div class="text-center capitalize font-bold text-2xl">sign up</div>
+      <div class="flex gap-1 pt-3">
+        <div
+          class="size-7 rounded-[50%] text-center content-center text-white bg-purple-700"
+        >
+          1
+        </div>
+        <div class="capitalize font-bold">your basic info</div>
+      </div>
+
+      <label for="fname" class="block pt-3 capitalize">name</label>
+      <input
+        type="text"
+        id="fname"
+        placeholder="your name"
+        class="bg-slate-100 p-2 w-full rounded-md capitalize focus:outline-2 focus:outline-purple-700"
+      />
+      <label for="fmail" class="block pt-3 capitalize">email</label>
+      <input
+        type="text"
+        id="fmail"
+        placeholder="your email"
+        class="bg-slate-100 p-2 w-full rounded-md capitalize focus:outline-2 focus:outline-purple-700"
+      />
+      <label for="fpw" class="block pt-3 capitalize">password</label>
+      <input
+        type="text"
+        id="fpw"
+        placeholder="your password"
+        class="bg-slate-100 p-2 w-full rounded-md capitalize focus:outline-2 focus:outline-purple-700"
+      />
+      <div class="block pt-3 capitalize">Age</div>
+      <input
+        type="radio"
+        name="age"
+        id="fage-under"
+        placeholder="your name"
+        class="checked:accent-purple-700"
+      />
+      <label for="fage-under" class="capitalize">under 13</label>
+      <br />
+      <input
+        type="radio"
+        name="age"
+        id="fage-over"
+        placeholder="your name"
+        class="checked:accent-purple-700"
+      />
+      <label for="fage-over" class="capitalize">over 13</label>
+
+      <div class="flex gap-1 pt-7">
+        <div
+          class="size-7 rounded-[50%] text-center content-center text-white bg-purple-700"
+        >
+          2
+        </div>
+        <div class="capitalize font-bold">your profile</div>
+      </div>
+
+      <label for="fbio" class="block pt-3 capitalize">bio</label>
+      <textarea
+        type="text"
+        id="fbio"
+        placeholder="your bio"
+        class="bg-slate-100 p-2 w-full rounded-md capitalize focus:outline-2 focus:outline-purple-700"
+      ></textarea>
+      <label for="frole" class="block pt-3 capitalize">role</label>
+      <select
+        id="frole"
+        class="bg-slate-100 p-2 w-full rounded-md capitalize focus:outline-2 focus:outline-purple-700"
+      >
+        <optgroup label="Web">
+          <option value="Front-end dev">Front-end dev</option>
+          <option value="Php dev">PHP dev</option>
+        </optgroup>
+        <optgroup label="Mobile">
+          <option value="ios">iOS dev</option>
+          <option value="android">Android dev</option>
+        </optgroup>
+        <optgroup label="Business">
+          <option value="owner">Bussiness Owner</option>
+          <option value="free">Freelancer</option>
+        </optgroup>
+      </select>
+      <div class="block pt-3 capitalize">interest</div>
+      <input type="checkbox" id="fdev" class="checked:accent-purple-700" />
+      <label for="fdev" class="capitalize">development</label>
+      <br />
+      <input type="checkbox" id="fdes" class="checked:accent-purple-700" />
+      <label for="fdes" class="capitalize">design</label>
+      <br />
+      <button
+        class="w-full mt-3 rounded-md capitalize bg-purple-700 p-2 text-white hover:bg-purple-800"
+      >
+        sign up
+      </button>
+    </form>
+  </body>
+</html>
