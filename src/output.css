@@ -714,6 +714,18 @@ video {
   right: 0.5rem;
 }
 
+.right-\[6px\] {
+  right: 6px;
+}
+
+.top-\[\] {
+  top: ;
+}
+
+.top-\[6px\] {
+  top: 6px;
+}
+
 .-z-10 {
   z-index: -10;
 }
@@ -843,6 +855,10 @@ video {
   height: 100vh;
 }
 
+.h-9 {
+  height: 2.25rem;
+}
+
 .w-0 {
   width: 0px;
 }
@@ -885,6 +901,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-9 {
+  width: 2.25rem;
 }
 
 .flex-none {
