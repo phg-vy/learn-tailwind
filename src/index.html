@@ -1,29 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./output.css" rel="stylesheet" />
+    <link href="./output.css" rel="stylesheet"/>
     <link rel="stylesheet" href="tailwind-benqu.css">
     <link
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     rel="stylesheet"
   />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wdth,wght@75..125,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body class="">
     <!-- Header -->
-     <header class="bg-white sticky top-0 z-10">
-       <div class="max-body  flex py-4 w-screen justify-between">
+     <header class=" bg-white dark:bg-black sticky top-0 z-10 py-4 mx-4  md:mx-8 lg:mx-10">
+       <div class=" flex justify-between">
          <img
            class="logo-black"
            src="./benqu/logo/logo-news.png"
            alt="logo"
            class="size-10"
          />
-         <nav class="flex gap-4 capitalize">
+        <!-- menu desktop -->
+         <nav class="flex gap-4 bg-white font-encode font-semibold capitalize hidden lg:block lg:flex	">
    
-           <div class=" group relative flex justify-center items-center ">
-             <div class=" flex justify-center items-center ">
+           <div class=" group relative text-center content-center ">
+             <div class=" flex justify-center items-center">
                <p>home</p>
                <svg
                  width="16"
@@ -55,9 +59,9 @@
    
            </div>
            
-           <div class=" group relative flex justify-center items-center ">
-             <div class=" flex justify-center items-center">
-               <p>features</p>
+           <div class=" group relative text-center content-center ">
+             <div class=" flex justify-center items-center">               
+              <p>features</p>
                <svg
                  width="16"
                  height="16"
@@ -88,9 +92,9 @@
    
            </div>
    
-           <div class=" group relative flex justify-center items-center ">
-             <div class=" flex justify-center items-center">
-               <p>categories</p>
+           <div class=" group relative text-center content-center ">
+             <div class=" flex justify-center items-center">       
+                      <p>categories</p>
                <svg
                  width="16"
                  height="16"
@@ -122,9 +126,9 @@
    
            </div>
            
-           <div class=" group relative flex justify-center items-center ">
+           <div class=" group relative text-center content-center ">
              <div class=" flex justify-center items-center">
-               <p>tags</p>
+                             <p>tags</p>
                <svg
                  width="16"
                  height="16"
@@ -156,39 +160,189 @@
    
            </div>
    
-   
            <p class="place-content-center ">contact us</p>
          </nav>
+
+         <div class="flex">
+          
+           <!-- search bar -->
+            <div class="relative">
+                <input type="text" id="search" class="cursor-pointer absolute z-10 bg-transparent right-0 p-4 h-12 w-12 rounded-[50px] border border-gray-400 peer/search focus:w-48 transition-all duration-500">
+                <label for="search" class="group/search ">
+                    <i class="material-symbols-outlined absolute right-0 w-12 h-12 rounded-[50%] border border-gray-400 text-center content-center opacity-100 peer-focus/search:group-[]/search:opacity-0 transition-all duration-500  " >search</i>
+                    <i class="material-symbols-outlined absolute right-0 w-12 h-12 rounded-[50%] border border-gray-400 text-center content-center opacity-0 peer-focus/search:group-[]/search:opacity-100 peer-focus/search:group-[]/search:w-9 peer-focus/search:group-[]/search:h-9 peer-focus/search:group-[]/search:right-[6px] peer-focus/search:group-[]/search:top-[6px] peer-focus/search:group-[]/search:z-50 transition-all duration-500 ">close</i>  
+                </label>
+
+            </div>
+
+           <!-- change-mode -->
+            <div class="relative size-12 ">
+                <input type="checkbox" id="dark-mode" class="hidden">
+                <label for="dark-mode" class="absolute left-2 top-2">
+                    <svg 
+                    class="dark-mode"
+                    width="32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 -960 960 960"
+                  >
+                    <path
+                      d="M480-120q-151 0-255.5-104.5T120-480q0-138 90-239.5T440-838q13-2 23 3.5t16 14.5q6 9 6.5 21t-7.5 23q-17 26-25.5 55t-8.5 61q0 90 63 153t153 63q31 0 61.5-9t54.5-25q11-7 22.5-6.5T819-479q10 5 15.5 15t3.5 24q-14 138-117.5 229T480-120Z"
+                    />
+                  </svg>
+                </label>
+
+            </div>
+
+            <!-- menu toggle -->
+            <div class="relative size-10 lg:hidden">
+      
+              <input type="checkbox" id="menu-toggle" class="peer/menu-toggle hidden"/>
+              <label for="menu-toggle" class="group/menu-toggle">
+                <svg class="absolute left-0 top-2 opacity-100 peer-checked/menu-toggle:group-[]/menu-toggle:opacity-0" xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960"><path d="M160-240q-17 0-28.5-11.5T120-280q0-17 11.5-28.5T160-320h640q17 0 28.5 11.5T840-280q0 17-11.5 28.5T800-240H160Zm0-200q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520h640q17 0 28.5 11.5T840-480q0 17-11.5 28.5T800-440H160Zm0-200q-17 0-28.5-11.5T120-680q0-17 11.5-28.5T160-720h640q17 0 28.5 11.5T840-680q0 17-11.5 28.5T800-640H160Z"/></svg>
+                <svg class="absolute left-0 top-2 opacity-0 peer-checked/menu-toggle:group-[]/menu-toggle:opacity-100 peer-checked/menu-toggle:group-[]/menu-toggle:z-20" xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960"><path d="M480-424 284-228q-11 11-28 11t-28-11q-11-11-11-28t11-28l196-196-196-196q-11-11-11-28t11-28q11-11 28-11t28 11l196 196 196-196q11-11 28-11t28 11q11 11 11 28t-11 28L536-480l196 196q11 11 11 28t-11 28q-11 11-28 11t-28-11L480-424Z"/></svg>
+              </label>
+              <!-- menu mobile -->
+              <nav class=" fixed flex flex-col w-[300px] h-screen pt-20 px-4 z-10 top-0 right-0 shadow-lg bg-white font-encode font-semibold capitalize -right-[300px] peer-checked/menu-toggle:right-0 transition-all duration-500">
    
-         <div class="flex gap-3">
+                <div class=" group ">
+                  <div class="flex py-4 justify-start items-center border-b border-gray-200">
+                    <p>home</p>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="group-hover:rotate-90 transition-all duration-300"
+                    >
+                      <path
+                        d="M15.75 9.525L11.164 4.939C10.8827 4.65774 10.5011 4.49978 10.1032 4.49988C9.70534 4.49997 9.32381 4.65811 9.04255 4.9395C8.76129 5.2209 8.60333 5.6025 8.60342 6.00036C8.60352 6.39822 8.76166 6.77974 9.04305 7.061L13.629 11.646C13.6756 11.6925 13.7125 11.7476 13.7378 11.8084C13.763 11.8691 13.7759 11.9342 13.7759 12C13.7759 12.0658 13.763 12.1309 13.7378 12.1916C13.7125 12.2524 13.6756 12.3076 13.629 12.354L9.04305 16.939C8.76166 17.2203 8.60352 17.6018 8.60342 17.9997C8.60333 18.3975 8.76129 18.7791 9.04255 19.0605C9.32381 19.3419 9.70534 19.5 10.1032 19.5001C10.5011 19.5002 10.8827 19.3423 11.164 19.061L15.75 14.475C16.4053 13.818 16.7732 12.9279 16.7732 12C16.7732 11.0721 16.4053 10.182 15.75 9.525Z"
+                        fill="#374957"
+                      />
+                    </svg>
+                  </div>
+          
+                  <div class="hidden group-hover:block transition-all duration-300 bg-white">
+                    <ul class=" flex flex-col">
+                      <li class="flex gap-2 py-4 items-center group/ten border-b border-gray-200">
+                        <div class=" h-[3px] bg-red-600 w-0 group-hover/ten:w-4 transition-all duration-500"></div>
+                        <a href="#">home 1</a>
+                      </li>
+                      <li class="flex gap-2 py-4 items-center group/ten border-b border-gray-20">
+                        <div class=" h-[3px] bg-red-600 w-0 group-hover/ten:w-4 transition-all duration-500"></div>
+                        <a href="#">home 2</a>
+                      </li>
+                    </ul>
+                  </div>
+        
+                </div>
+
+                <div class=" group ">
+                  <div class="flex py-4 justify-start items-center border-b border-gray-200">
+                    <p>features</p>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="group-hover:rotate-90 transition-all duration-300"
+                    >
+                      <path
+                        d="M15.75 9.525L11.164 4.939C10.8827 4.65774 10.5011 4.49978 10.1032 4.49988C9.70534 4.49997 9.32381 4.65811 9.04255 4.9395C8.76129 5.2209 8.60333 5.6025 8.60342 6.00036C8.60352 6.39822 8.76166 6.77974 9.04305 7.061L13.629 11.646C13.6756 11.6925 13.7125 11.7476 13.7378 11.8084C13.763 11.8691 13.7759 11.9342 13.7759 12C13.7759 12.0658 13.763 12.1309 13.7378 12.1916C13.7125 12.2524 13.6756 12.3076 13.629 12.354L9.04305 16.939C8.76166 17.2203 8.60352 17.6018 8.60342 17.9997C8.60333 18.3975 8.76129 18.7791 9.04255 19.0605C9.32381 19.3419 9.70534 19.5 10.1032 19.5001C10.5011 19.5002 10.8827 19.3423 11.164 19.061L15.75 14.475C16.4053 13.818 16.7732 12.9279 16.7732 12C16.7732 11.0721 16.4053 10.182 15.75 9.525Z"
+                        fill="#374957"
+                      />
+                    </svg>
+                  </div>
+          
+                  <div class="hidden group-hover:block transition-all duration-300 bg-white">
+                    <ul class=" flex flex-col">
+                      <li class="flex gap-2 py-4 items-center group/ten border-b border-gray-200">
+                        <div class=" h-[3px] bg-red-600 w-0 group-hover/ten:w-4 transition-all duration-500"></div>
+                        <a href="#">feature 1</a>
+                      </li>
+                      <li class="flex gap-2 py-4 items-center group/ten border-b border-gray-20">
+                        <div class=" h-[3px] bg-red-600 w-0 group-hover/ten:w-4 transition-all duration-500"></div>
+                        <a href="#">feature 2</a>
+                      </li>
+                    </ul>
+                  </div>
+        
+                </div>
+
+                <div class=" group ">
+                  <div class="flex py-4 justify-start items-center border-b border-gray-200">
+                    <p>categories</p>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="group-hover:rotate-90 transition-all duration-300"
+                    >
+                      <path
+                        d="M15.75 9.525L11.164 4.939C10.8827 4.65774 10.5011 4.49978 10.1032 4.49988C9.70534 4.49997 9.32381 4.65811 9.04255 4.9395C8.76129 5.2209 8.60333 5.6025 8.60342 6.00036C8.60352 6.39822 8.76166 6.77974 9.04305 7.061L13.629 11.646C13.6756 11.6925 13.7125 11.7476 13.7378 11.8084C13.763 11.8691 13.7759 11.9342 13.7759 12C13.7759 12.0658 13.763 12.1309 13.7378 12.1916C13.7125 12.2524 13.6756 12.3076 13.629 12.354L9.04305 16.939C8.76166 17.2203 8.60352 17.6018 8.60342 17.9997C8.60333 18.3975 8.76129 18.7791 9.04255 19.0605C9.32381 19.3419 9.70534 19.5 10.1032 19.5001C10.5011 19.5002 10.8827 19.3423 11.164 19.061L15.75 14.475C16.4053 13.818 16.7732 12.9279 16.7732 12C16.7732 11.0721 16.4053 10.182 15.75 9.525Z"
+                        fill="#374957"
+                      />
+                    </svg>
+                  </div>
+          
+                  <div class="hidden group-hover:block transition-all duration-300 bg-white">
+                    <ul class=" flex flex-col">
+                      <li class="flex gap-2 py-4 items-center group/ten border-b border-gray-200">
+                        <div class=" h-[3px] bg-red-600 w-0 group-hover/ten:w-4 transition-all duration-500"></div>
+                        <a href="#">categorie 1</a>
+                      </li>
+                      <li class="flex gap-2 py-4 items-center group/ten border-b border-gray-20">
+                        <div class=" h-[3px] bg-red-600 w-0 group-hover/ten:w-4 transition-all duration-500"></div>
+                        <a href="#">categorie 2</a>
+                      </li>
+                    </ul>
+                  </div>
+        
+                </div>
+
+                <div class=" group ">
+                  <div class="flex py-4 justify-start items-center border-b border-gray-200">
+                    <p>Tags</p>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="group-hover:rotate-90 transition-all duration-300"
+                    >
+                      <path
+                        d="M15.75 9.525L11.164 4.939C10.8827 4.65774 10.5011 4.49978 10.1032 4.49988C9.70534 4.49997 9.32381 4.65811 9.04255 4.9395C8.76129 5.2209 8.60333 5.6025 8.60342 6.00036C8.60352 6.39822 8.76166 6.77974 9.04305 7.061L13.629 11.646C13.6756 11.6925 13.7125 11.7476 13.7378 11.8084C13.763 11.8691 13.7759 11.9342 13.7759 12C13.7759 12.0658 13.763 12.1309 13.7378 12.1916C13.7125 12.2524 13.6756 12.3076 13.629 12.354L9.04305 16.939C8.76166 17.2203 8.60352 17.6018 8.60342 17.9997C8.60333 18.3975 8.76129 18.7791 9.04255 19.0605C9.32381 19.3419 9.70534 19.5 10.1032 19.5001C10.5011 19.5002 10.8827 19.3423 11.164 19.061L15.75 14.475C16.4053 13.818 16.7732 12.9279 16.7732 12C16.7732 11.0721 16.4053 10.182 15.75 9.525Z"
+                        fill="#374957"
+                      />
+                    </svg>
+                  </div>
+          
+                  <div class="hidden group-hover:block transition-all duration-300 bg-white">
+                    <ul class=" flex flex-col">
+                      <li class="flex gap-2 py-4 items-center group/ten border-b border-gray-200">
+                        <div class=" h-[3px] bg-red-600 w-0 group-hover/ten:w-4 transition-all duration-500"></div>
+                        <a href="#">tag 1</a>
+                      </li>
+                      <li class="flex gap-2 py-4 items-center group/ten border-b border-gray-20">
+                        <div class=" h-[3px] bg-red-600 w-0 group-hover/ten:w-4 transition-all duration-500"></div>
+                        <a href="#">tag 2</a>
+                      </li>
+                    </ul>
+                  </div>
+        
+                </div>
+                
+
+        
+                <p class="py-4 lg:place-content-center ">contact us</p>
+              </nav>
+              
+            </div>
    
-                   <!-- search bar -->
-                    <div class="relative">
-                        <input type="text" id="search" class="absolute right-0 p-4 h-12 rounded-[50px] border border-gray-400">
-                        <label for="search">
-                            <i class="material-symbols-outlined absolute right-0 w-12 h-12 rounded-[50%] border border-gray-400 text-center content-center" >search</i>
-                            <i class="material-symbols-outlined absolute right-0 w-12 h-12 rounded-[50%] border border-gray-400 text-center content-center">close</i>  
-                        </label>
-       
-                    </div>
-       
-                   <!-- change-mode -->
-                    <div class=" right-0 text-center content-center">
-                        <input type="checkbox" id="dark-mode" class="hidden">
-                        <label for="dark-mode" class="">
-                            <svg 
-                            class="dark-mode"
-                            width="32"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 -960 960 960"
-                          >
-                            <path
-                              d="M480-120q-151 0-255.5-104.5T120-480q0-138 90-239.5T440-838q13-2 23 3.5t16 14.5q6 9 6.5 21t-7.5 23q-17 26-25.5 55t-8.5 61q0 90 63 153t153 63q31 0 61.5-9t54.5-25q11-7 22.5-6.5T819-479q10 5 15.5 15t3.5 24q-14 138-117.5 229T480-120Z"
-                            />
-                          </svg>
-                        </label>
-       
-                    </div>
    
          </div>
        </div>
@@ -197,66 +351,67 @@
 
     <!-- Breadcrumb -->
      <div class=" bg-gray-100 ">
-       <div class="max-body flex h-14 gap-2 items-center">
-        <a href="" class="flex gap-2 after:content-['/'] after:text-gray-400 hover:text-red-600">Home</a>
-        <a href="" class="flex gap-2 after:content-['/']  after:text-gray-400 hover:text-red-600">Page</a>
+       <div class=" flex h-14 gap-2 mx-4 font-encode font-semibold font-encode font-semibold text-sm items-center md:mx-8 lg:mx-10">
+        <a href="" class="flex gap-2 after:content-['/'] after:text-gray-500 hover:text-red-600">Home</a>
+        <a href="" class="flex gap-2 after:content-['/']  after:text-gray-500 hover:text-red-600">Page</a>
         <span >Detail</span>
        </div>
 
      </div>
 
     <!-- Section -->
-    <div class="">
-      <div class="max-body flex gap-6 w-screen py-14 ">
+    <section class="">
+      <div class=" flex flex-col gap-10  py-14 mx-4 md:mx-8 lg:mx-10 lg:flex-row lg:gap-10 ">
         <!-- left -->
-        <div class=" flex flex-col gap-10 w-[70%]  ">
+        <div class=" flex flex-col gap-10   lg:w-[65%]">
           <!-- 1-bussines -->
-           <div class="cursor-pointer group flex post border border-gray-300 rounded-[8px]">
-              <div class="overflow-hidden flex-none rounded-l-[6px] ">
+          <div class="cursor-pointer group flex flex-col border border-gray-300 p-3 rounded-[18px] md:flex-row md:gap-x-6 md:p-0 md:rounded-[8px]">
+              <div class="overflow-hidden flex-none rounded-[6px] h-fit md:w-fit md:rounded-l-[6px] md:rounded-r-[0px] ">
                 <img
                 src="./benqu/img/business.jpg"
-                class="group-hover:scale-110 duration-1000 size-80 object-cover rounded-l-[6px] "
+                class="group-hover:scale-110 duration-1000 object-cover h-[320px] w-full md:size-80 "
               />
 
               </div>
             <!-- post-detail -->
-            <div class="flex flex-col justify-between p-8 ">
-              <div class="px-4 py-2 w-[100px] rounded-full rounded-tl-[0px] hover:rounded-full hover:rounded-tr-[0px] duration-300 text-[12px] font-bold text-center content-center uppercase bg-yellow-500 text-white ">Business</div>
-              <h1 class="line-clamp-2" class="line-clamp-2">
-                <a href="#" class="text-2xl font-bold  bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500 ">
+            <div class="flex flex-col justify-between py-6 gap-y-4 md:pr-6 ">
+              <div class="px-4 py-2 w-[100px] rounded-full rounded-tl-[0px] hover:rounded-full hover:rounded-tr-[0px] duration-300 text-[12px] font-semibold text-center content-center uppercase bg-yellow-500 text-white ">Business</div>
+              <h1 class="line-clamp-2">
+                <a href="#" class="font-lora text-2xl font-bold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500 ">
                   Emirates Palace Spends that a Hefty Sum For Emirates Palace
                   Spends that a Hefty Sum ForEmirates Palace Spends that a Hefty
                   Sum ForEmirates Palace Spends that a Hefty Sum ForEmirates
                   Palace Spends that a Hefty Sum For
                 </a>
-              </h1 class="line-clamp-2">
-              <p class="line-clamp-3">
+              </h1>
+              <p class="font-lora line-clamp-3 text-gray-500">
                 There are many variations of passages of Lorem Ipsum available
                 but the majority have suffered alteration in that
               </p>
               <!-- item-post -->
-              <div class="flex gap-4 text-sm uppercase">
+              <div class="flex gap-3 font-encode font-semibold text-xs uppercase text-gray-500 text-gray-500 lg:text-[10px] xl:text-[12px]">
                 <p class="">by justind</p>
 
-                <div class="flex gap-1">
+                <div class="flex gap-1 fill-gray-500 text-gray-500 lg:text-[10px] xl:text-[12px]">
                     <svg
                     xmlns="http://www.w3.org/2000/svg"                  
                     viewBox="0 -960 960 960"
-                    class="w-[18px] "
+                    class="w-[18px] fill-gray-500"
+                    
                     >
                     <path
                     d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Z"
                     />
                     </svg>
 
-                    <p>august 29,2024</p>
+                    <p>august 29, 2024</p>
                 </div>
 
-                <div class="flex gap-1">
+                <div class="flex gap-1 fill-gray-500 text-gray-500 lg:text-[10px] xl:text-[12px]">
                   <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 -960 960 960"
-                  class="w-[18px] "
+                  class="w-[18px] fill-gray-500 "
                   >
                   <path
                     d="M840-136q-8 0-15-3t-13-9l-92-92H320q-33 0-56.5-23.5T240-320v-40h440q33 0 56.5-23.5T760-440v-280h40q33 0 56.5 23.5T880-640v463q0 18-12 29.5T840-136ZM120-336q-16 0-28-11.5T80-377v-423q0-33 23.5-56.5T160-880h440q33 0 56.5 23.5T680-800v280q0 33-23.5 56.5T600-440H240l-92 92q-6 6-13 9t-15 3Z"
@@ -269,55 +424,56 @@
               </div>
             </div>
 
-           </div>
+          </div>
 
           <!-- 2-fashion -->
-          <div class="cursor-pointer group flex post border border-gray-300 rounded-[8px]">
-            <div class="overflow-hidden flex-none rounded-l-[6px] ">
+          <div class="cursor-pointer group flex flex-col border border-gray-300 p-3 rounded-[18px] md:flex-row md:gap-x-6 md:p-0 md:rounded-[8px]">
+            <div class="overflow-hidden flex-none rounded-[6px] h-fit md:w-fit md:rounded-l-[6px] md:rounded-r-[0px] ">
               <img
               src="./benqu/img/news-1.jpg"
-              class="group-hover:scale-110 duration-1000 size-80 object-cover rounded-l-[6px] "
+              class="group-hover:scale-110 duration-1000 object-cover h-[320px] w-full md:size-80 "
             />
 
             </div>
           <!-- post-detail -->
-          <div class="flex flex-col justify-between p-8 ">
-            <div class="px-4 py-2 w-[100px] rounded-full rounded-tl-[0px] hover:rounded-full hover:rounded-tr-[0px] duration-300 text-[12px] font-bold text-center content-center uppercase bg-pink-700 text-white ">fashion</div>
+          <div class="flex flex-col justify-between py-6 gap-y-4 md:pr-6 ">
+            <div class="px-4 py-2 w-[100px] rounded-full rounded-tl-[0px] hover:rounded-full hover:rounded-tr-[0px] duration-300 text-[12px] font-semibold text-center content-center uppercase bg-pink-700 text-white ">fashion</div>
             <h1 class="line-clamp-2">
-              <a href="#" class="text-2xl font-bold  bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500">
+              <a href="#" class="font-lora text-2xl font-bold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500 ">
                 Emirates Palace Spends that a Hefty Sum For Emirates Palace
                 Spends that a Hefty Sum ForEmirates Palace Spends that a Hefty
                 Sum ForEmirates Palace Spends that a Hefty Sum ForEmirates
                 Palace Spends that a Hefty Sum For
               </a>
-            </h1 class="line-clamp-2">
-            <p class="line-clamp-3">
+            </h1>
+            <p class="font-lora line-clamp-3 text-gray-500">
               There are many variations of passages of Lorem Ipsum available
               but the majority have suffered alteration in that
             </p>
             <!-- item-post -->
-            <div class="flex gap-4 text-sm uppercase">
+            <div class="flex gap-3 font-encode font-semibold text-xs uppercase text-gray-500 text-gray-500 lg:text-[10px] xl:text-[12px]">
               <p class="">by justind</p>
 
-              <div class="flex gap-1">
+              <div class="flex gap-1 fill-gray-500 text-gray-500 lg:text-[10px] xl:text-[12px]">
                   <svg
                   xmlns="http://www.w3.org/2000/svg"                  
                   viewBox="0 -960 960 960"
-                  class="w-[18px] "
+                  class="w-[18px] fill-gray-500"
+                  
                   >
                   <path
                   d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Z"
                   />
                   </svg>
 
-                  <p>august 29,2024</p>
+                  <p>august 29, 2024</p>
               </div>
 
-              <div class="flex gap-1">
+              <div class="flex gap-1 fill-gray-500 text-gray-500 lg:text-[10px] xl:text-[12px]">
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 -960 960 960"
-                class="w-[18px] "
+                class="w-[18px] fill-gray-500 "
                 >
                 <path
                   d="M840-136q-8 0-15-3t-13-9l-92-92H320q-33 0-56.5-23.5T240-320v-40h440q33 0 56.5-23.5T760-440v-280h40q33 0 56.5 23.5T880-640v463q0 18-12 29.5T840-136ZM120-336q-16 0-28-11.5T80-377v-423q0-33 23.5-56.5T160-880h440q33 0 56.5 23.5T680-800v280q0 33-23.5 56.5T600-440H240l-92 92q-6 6-13 9t-15 3Z"
@@ -330,55 +486,56 @@
             </div>
           </div>
 
-          </div>
+        </div>
 
           <!-- 3-interview -->
-          <div class="cursor-pointer group flex post border border-gray-300 rounded-[8px]">
-            <div class="overflow-hidden flex-none rounded-l-[6px]">
+          <div class="cursor-pointer group flex flex-col border border-gray-300 p-3 rounded-[18px] md:flex-row md:gap-x-6 md:p-0 md:rounded-[8px]">
+            <div class="overflow-hidden flex-none rounded-[6px] h-fit md:w-fit md:rounded-l-[6px] md:rounded-r-[0px] ">
               <img
               src="./benqu/img/news-2.jpg"
-              class="group-hover:scale-110 duration-1000 size-80 object-cover rounded-l-[6px] "
+              class="group-hover:scale-110 duration-1000 object-cover h-[320px] w-full md:size-80 "
             />
 
             </div>
           <!-- post-detail -->
-          <div class="flex flex-col justify-between p-8 ">
-            <div class="px-4 py-2 w-[100px] rounded-full rounded-tl-[0px] hover:rounded-full hover:rounded-tr-[0px] duration-300 text-[12px] font-bold text-center content-center uppercase bg-teal-500 text-white ">interview</div>
+          <div class="flex flex-col justify-between py-6 gap-y-4 md:pr-6 ">
+            <div class="px-4 py-2 w-[100px] rounded-full rounded-tl-[0px] hover:rounded-full hover:rounded-tr-[0px] duration-300 text-[12px] font-semibold text-center content-center uppercase bg-teal-500 text-white ">interview</div>
             <h1 class="line-clamp-2">
-              <a href="#" class="text-2xl font-bold  bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500">
+              <a href="#" class="font-lora text-2xl font-bold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500 ">
                 Emirates Palace Spends that a Hefty Sum For Emirates Palace
                 Spends that a Hefty Sum ForEmirates Palace Spends that a Hefty
                 Sum ForEmirates Palace Spends that a Hefty Sum ForEmirates
                 Palace Spends that a Hefty Sum For
               </a>
-            </h1 class="line-clamp-2">
-            <p class="line-clamp-3">
+            </h1>
+            <p class="font-lora line-clamp-3 text-gray-500">
               There are many variations of passages of Lorem Ipsum available
               but the majority have suffered alteration in that
             </p>
             <!-- item-post -->
-            <div class="flex gap-4 text-sm uppercase">
+            <div class="flex gap-3 font-encode font-semibold text-xs uppercase text-gray-500 text-gray-500 lg:text-[10px] xl:text-[12px]">
               <p class="">by justind</p>
 
-              <div class="flex gap-1">
+              <div class="flex gap-1 fill-gray-500 text-gray-500 lg:text-[10px] xl:text-[12px]">
                   <svg
                   xmlns="http://www.w3.org/2000/svg"                  
                   viewBox="0 -960 960 960"
-                  class="w-[18px] "
+                  class="w-[18px] fill-gray-500"
+                  
                   >
                   <path
                   d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Z"
                   />
                   </svg>
 
-                  <p>august 29,2024</p>
+                  <p>august 29, 2024</p>
               </div>
 
-              <div class="flex gap-1">
+              <div class="flex gap-1 fill-gray-500 text-gray-500 lg:text-[10px] xl:text-[12px]">
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 -960 960 960"
-                class="w-[18px] "
+                class="w-[18px] fill-gray-500 "
                 >
                 <path
                   d="M840-136q-8 0-15-3t-13-9l-92-92H320q-33 0-56.5-23.5T240-320v-40h440q33 0 56.5-23.5T760-440v-280h40q33 0 56.5 23.5T880-640v463q0 18-12 29.5T840-136ZM120-336q-16 0-28-11.5T80-377v-423q0-33 23.5-56.5T160-880h440q33 0 56.5 23.5T680-800v280q0 33-23.5 56.5T600-440H240l-92 92q-6 6-13 9t-15 3Z"
@@ -391,55 +548,56 @@
             </div>
           </div>
 
-          </div>    
+        </div>
           
           <!-- 4-education -->
-          <div class="cursor-pointer group flex post border border-gray-300 rounded-[8px]">
-            <div class="overflow-hidden flex-none rounded-l-[6px] ">
+          <div class="cursor-pointer group flex flex-col border border-gray-300 p-3 rounded-[18px] md:flex-row md:gap-x-6 md:p-0 md:rounded-[8px]">
+            <div class="overflow-hidden flex-none rounded-[6px] h-fit md:w-fit md:rounded-l-[6px] md:rounded-r-[0px] ">
               <img
               src="./benqu/img/news-3.jpg"
-              class="group-hover:scale-110 duration-1000 size-80 object-cover rounded-l-[6px] "
+              class="group-hover:scale-110 duration-1000 object-cover h-[320px] w-full md:size-80 "
             />
 
             </div>
           <!-- post-detail -->
-          <div class="flex flex-col justify-between p-8 ">
-            <div class="px-4 py-2 w-[100px] rounded-full rounded-tl-[0px] hover:rounded-full hover:rounded-tr-[0px] duration-300 text-[12px] font-bold text-center content-center uppercase bg-teal-700 text-white ">education</div>
+          <div class="flex flex-col justify-between py-6 gap-y-4 md:pr-6 ">
+            <div class="px-4 py-2 w-[100px] rounded-full rounded-tl-[0px] hover:rounded-full hover:rounded-tr-[0px] duration-300 text-[12px] font-semibold text-center content-center uppercase bg-teal-700 text-white ">education</div>
             <h1 class="line-clamp-2">
-              <a href="#" class="text-2xl font-bold  bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500">
+              <a href="#" class="font-lora text-2xl font-bold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500 ">
                 Emirates Palace Spends that a Hefty Sum For Emirates Palace
                 Spends that a Hefty Sum ForEmirates Palace Spends that a Hefty
                 Sum ForEmirates Palace Spends that a Hefty Sum ForEmirates
                 Palace Spends that a Hefty Sum For
               </a>
-            </h1 class="line-clamp-2">
-            <p class="line-clamp-3">
+            </h1>
+            <p class="font-lora line-clamp-3 text-gray-500">
               There are many variations of passages of Lorem Ipsum available
               but the majority have suffered alteration in that
             </p>
             <!-- item-post -->
-            <div class="flex gap-4 text-sm uppercase">
+            <div class="flex gap-3 font-encode font-semibold text-xs uppercase text-gray-500 text-gray-500 lg:text-[10px] xl:text-[12px]">
               <p class="">by justind</p>
 
-              <div class="flex gap-1">
+              <div class="flex gap-1 fill-gray-500 text-gray-500 lg:text-[10px] xl:text-[12px]">
                   <svg
                   xmlns="http://www.w3.org/2000/svg"                  
                   viewBox="0 -960 960 960"
-                  class="w-[18px] "
+                  class="w-[18px] fill-gray-500"
+                  
                   >
                   <path
                   d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Z"
                   />
                   </svg>
 
-                  <p>august 29,2024</p>
+                  <p>august 29, 2024</p>
               </div>
 
-              <div class="flex gap-1">
+              <div class="flex gap-1 fill-gray-500 text-gray-500 lg:text-[10px] xl:text-[12px]">
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 -960 960 960"
-                class="w-[18px] "
+                class="w-[18px] fill-gray-500 "
                 >
                 <path
                   d="M840-136q-8 0-15-3t-13-9l-92-92H320q-33 0-56.5-23.5T240-320v-40h440q33 0 56.5-23.5T760-440v-280h40q33 0 56.5 23.5T880-640v463q0 18-12 29.5T840-136ZM120-336q-16 0-28-11.5T80-377v-423q0-33 23.5-56.5T160-880h440q33 0 56.5 23.5T680-800v280q0 33-23.5 56.5T600-440H240l-92 92q-6 6-13 9t-15 3Z"
@@ -452,55 +610,56 @@
             </div>
           </div>
 
-          </div>  
+        </div>
 
           <!-- 5-health -->
-          <div class="cursor-pointer group flex post border border-gray-300 rounded-[8px]">
-            <div class="overflow-hidden flex-none rounded-l-[6px] ">
+          <div class="cursor-pointer group flex flex-col border border-gray-300 p-3 rounded-[18px] md:flex-row md:gap-x-6 md:p-0 md:rounded-[8px]">
+            <div class="overflow-hidden flex-none rounded-[6px] h-fit md:w-fit md:rounded-l-[6px] md:rounded-r-[0px] ">
               <img
               src="./benqu/img/articles-3.jpg"
-              class="group-hover:scale-110 duration-1000 size-80 object-cover rounded-l-[6px] "
+              class="group-hover:scale-110 duration-1000 object-cover h-[320px] w-full md:size-80 "
             />
 
             </div>
           <!-- post-detail -->
-          <div class="flex flex-col justify-between p-8 ">
-            <div class="px-4 py-2 w-[100px] rounded-full rounded-tl-[0px] hover:rounded-full hover:rounded-tr-[0px] duration-300 text-[12px] font-bold text-center content-center uppercase bg-green-700 text-white ">health</div>
+          <div class="flex flex-col justify-between py-6 gap-y-4 md:pr-6 ">
+            <div class="px-4 py-2 w-[100px] rounded-full rounded-tl-[0px] hover:rounded-full hover:rounded-tr-[0px] duration-300 text-[12px] font-semibold text-center content-center uppercase bg-green-700 text-white ">health</div>
             <h1 class="line-clamp-2">
-              <a href="#" class="text-2xl font-bold  bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500">
+              <a href="#" class="font-lora text-2xl font-bold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500 ">
                 Emirates Palace Spends that a Hefty Sum For Emirates Palace
                 Spends that a Hefty Sum ForEmirates Palace Spends that a Hefty
                 Sum ForEmirates Palace Spends that a Hefty Sum ForEmirates
                 Palace Spends that a Hefty Sum For
               </a>
-            </h1 class="line-clamp-2">
-            <p class="line-clamp-3">
+            </h1>
+            <p class="font-lora line-clamp-3 text-gray-500">
               There are many variations of passages of Lorem Ipsum available
               but the majority have suffered alteration in that
             </p>
             <!-- item-post -->
-            <div class="flex gap-4 text-sm uppercase">
+            <div class="flex gap-3 font-encode font-semibold text-xs uppercase text-gray-500 text-gray-500 lg:text-[10px] xl:text-[12px]">
               <p class="">by justind</p>
 
-              <div class="flex gap-1">
+              <div class="flex gap-1 fill-gray-500 text-gray-500 lg:text-[10px] xl:text-[12px]">
                   <svg
                   xmlns="http://www.w3.org/2000/svg"                  
                   viewBox="0 -960 960 960"
-                  class="w-[18px] "
+                  class="w-[18px] fill-gray-500"
+                  
                   >
                   <path
                   d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Z"
                   />
                   </svg>
 
-                  <p>august 29,2024</p>
+                  <p>august 29, 2024</p>
               </div>
 
-              <div class="flex gap-1">
+              <div class="flex gap-1 fill-gray-500 text-gray-500 lg:text-[10px] xl:text-[12px]">
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 -960 960 960"
-                class="w-[18px] "
+                class="w-[18px] fill-gray-500 "
                 >
                 <path
                   d="M840-136q-8 0-15-3t-13-9l-92-92H320q-33 0-56.5-23.5T240-320v-40h440q33 0 56.5-23.5T760-440v-280h40q33 0 56.5 23.5T880-640v463q0 18-12 29.5T840-136ZM120-336q-16 0-28-11.5T80-377v-423q0-33 23.5-56.5T160-880h440q33 0 56.5 23.5T680-800v280q0 33-23.5 56.5T600-440H240l-92 92q-6 6-13 9t-15 3Z"
@@ -513,55 +672,56 @@
             </div>
           </div>
 
-          </div>   
+        </div> 
           
           <!-- 6-business-2 -->
-          <div class="cursor-pointer group flex post border border-gray-300 rounded-[8px]">
-            <div class="overflow-hidden flex-none rounded-l-[6px] ">
+          <div class="cursor-pointer group flex flex-col border border-gray-300 p-3 rounded-[18px] md:flex-row md:gap-x-6 md:p-0 md:rounded-[8px]">
+            <div class="overflow-hidden flex-none rounded-[6px] h-fit md:w-fit md:rounded-l-[6px] md:rounded-r-[0px] ">
               <img
               src="./benqu/img/articles-1.jpg"
-              class="group-hover:scale-110 duration-1000 size-80 object-cover rounded-l-[6px] "
+              class="group-hover:scale-110 duration-1000 object-cover h-[320px] w-full md:size-80 "
             />
 
             </div>
           <!-- post-detail -->
-          <div class="flex flex-col justify-between p-8 ">
-            <div class="px-4 py-2 w-[100px] rounded-full rounded-tl-[0px] hover:rounded-full hover:rounded-tr-[0px] duration-300 text-[12px] font-bold text-center content-center uppercase bg-yellow-500 text-white ">Business</div>
+          <div class="flex flex-col justify-between py-6 gap-y-4 md:pr-6 ">
+            <div class="px-4 py-2 w-[100px] rounded-full rounded-tl-[0px] hover:rounded-full hover:rounded-tr-[0px] duration-300 text-[12px] font-semibold text-center content-center uppercase bg-yellow-500 text-white ">Business</div>
             <h1 class="line-clamp-2">
-              <a href="#" class="text-2xl font-bold  bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500">
+              <a href="#" class="font-lora text-2xl font-bold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500 ">
                 Emirates Palace Spends that a Hefty Sum For Emirates Palace
                 Spends that a Hefty Sum ForEmirates Palace Spends that a Hefty
                 Sum ForEmirates Palace Spends that a Hefty Sum ForEmirates
                 Palace Spends that a Hefty Sum For
               </a>
-            </h1 class="line-clamp-2">
-            <p class="line-clamp-3">
+            </h1>
+            <p class="font-lora line-clamp-3 text-gray-500">
               There are many variations of passages of Lorem Ipsum available
               but the majority have suffered alteration in that
             </p>
             <!-- item-post -->
-            <div class="flex gap-4 text-sm uppercase">
+            <div class="flex gap-3 font-encode font-semibold text-xs uppercase text-gray-500 text-gray-500 lg:text-[10px] xl:text-[12px]">
               <p class="">by justind</p>
 
-              <div class="flex gap-1">
+              <div class="flex gap-1 fill-gray-500 text-gray-500 lg:text-[10px] xl:text-[12px]">
                   <svg
                   xmlns="http://www.w3.org/2000/svg"                  
                   viewBox="0 -960 960 960"
-                  class="w-[18px] "
+                  class="w-[18px] fill-gray-500"
+                  
                   >
                   <path
                   d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Z"
                   />
                   </svg>
 
-                  <p>august 29,2024</p>
+                  <p>august 29, 2024</p>
               </div>
 
-              <div class="flex gap-1">
+              <div class="flex gap-1 fill-gray-500 text-gray-500 lg:text-[10px] xl:text-[12px]">
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 -960 960 960"
-                class="w-[18px] "
+                class="w-[18px] fill-gray-500 "
                 >
                 <path
                   d="M840-136q-8 0-15-3t-13-9l-92-92H320q-33 0-56.5-23.5T240-320v-40h440q33 0 56.5-23.5T760-440v-280h40q33 0 56.5 23.5T880-640v463q0 18-12 29.5T840-136ZM120-336q-16 0-28-11.5T80-377v-423q0-33 23.5-56.5T160-880h440q33 0 56.5 23.5T680-800v280q0 33-23.5 56.5T600-440H240l-92 92q-6 6-13 9t-15 3Z"
@@ -574,44 +734,44 @@
             </div>
           </div>
 
-          </div>              
+        </div>             
         </div>
 
         <!-- right -->
-         <div class="flex flex-col gap-10 w-[30%]">
+         <div class=" flex flex-col gap-10 lg:w-[35%]">
 
           <!-- categories -->
           <div class="cate flex flex-col gap-4 ">
 
-            <div class="h-10 relative ">
+            <div class="font-lora h-10 relative ">
               <div class="absolute top-4 w-full h-[2px] bg-gray-300 "></div>
               <h2 class="absolute left-6 px-3 text-2xl font-bold capitalize bg-white ">categories</h2>
             </div>
 
-            <div  class="grid grid-cols-2 gap-4">
+            <div  class="font-encode font-semibold uppercase text-white grid grid-cols-2 gap-4">
               <div class="cursor-pointer group relative h-[60px] rounded-full rounded-tl-[0px] bg-[url('./benqu/img/bg-business.jpg')] bg-cover overflow-hidden">
                 <div class="absolute h-full w-full bg-yellow-500 opacity-60 group-hover:opacity-100 duration-500"></div>
-                <p class="absolute h-full w-full p-4 text-center content-center font-bold uppercase text-white">business(10)</p>
+                <p class="absolute h-full w-full p-4 text-center content-center ">business(10)</p>
               </div>
 
               <div class="cursor-pointer group relative h-[60px] rounded-full rounded-tl-[0px]   bg-[url('./benqu/img/bg-education.jpg')] bg-cover overflow-hidden">
                 <div class="absolute h-full w-full bg-teal-700 opacity-60 group-hover:opacity-100 duration-500"></div>
-                <p class="absolute h-full w-full p-4 text-center content-center font-bold uppercase text-white">education(10)</p>
+                <p class="absolute h-full w-full p-4 text-center content-center ">education(10)</p>
               </div>
 
               <div class="cursor-pointer group relative h-[60px] rounded-full rounded-tl-[0px]   bg-[url('./benqu/img/fashion1.jpg')] bg-cover overflow-hidden">
                 <div class="absolute h-full w-full bg-pink-700 opacity-60 group-hover:opacity-100 duration-500 "></div>
-                <p class="absolute h-full w-full p-4 text-center content-center font-bold uppercase text-white">fashion(13)</p>
+                <p class="absolute h-full w-full p-4 text-center content-center ">fashion(13)</p>
               </div>
 
               <div class="cursor-pointer group relative h-[60px] rounded-full rounded-tl-[0px]   bg-[url('./benqu/img/bg-business-2.jpg')] bg-cover overflow-hidden">
                 <div class="absolute h-full w-full bg-green-600 opacity-60 group-hover:opacity-100 duration-500 "></div>
-                <p class="absolute h-full w-full p-4 text-center content-center font-bold uppercase text-white">health(13)</p>
+                <p class="absolute h-full w-full p-4 text-center content-center ">health(13)</p>
               </div>
 
               <div class="cursor-pointer group relative h-[60px] rounded-full rounded-tl-[0px]   bg-[url('./benqu/img/bg-newspaper.jpg')] bg-cover overflow-hidden">
                 <div class="absolute h-full w-full bg-teal-500 opacity-60 group-hover:opacity-100 duration-500"></div>
-                <p class="absolute h-full w-full p-4 text-center content-center font-bold uppercase text-white">interview(13)</p>
+                <p class="absolute h-full w-full p-4 text-center content-center" >interview(13)</p>
               </div>
 
             </div>
@@ -620,7 +780,7 @@
 
           <!-- blog post -->
           <div class="post flex flex-col gap-4 ">
-            <div class="h-10 relative ">
+            <div class="font-lora h-10 relative ">
               <div class="absolute top-4 w-full h-[2px] bg-gray-300 "></div>
               <h2 class="absolute left-6 px-3 text-2xl font-bold capitalize bg-white ">blog posts</h2>
             </div>
@@ -638,8 +798,8 @@
               <!-- blog detail -->
              <div class="">
               <div class="flex gap-2 pb-4">
-                <div class="text-[12px] font-bold text-yellow-600 uppercase">business</div>
-                <div class="flex gap-1">
+                <div class="text-[12px] font-semibold text-center content-center text-yellow-600 uppercase">business</div>
+                <div class="flex gap-1 fill-gray-500 text-gray-500">
                   <svg
                   xmlns="http://www.w3.org/2000/svg"                  
                   viewBox="0 -960 960 960"
@@ -651,17 +811,17 @@
                   />
                   </svg>
 
-                  <p class="text-[12px] font-bold uppercase">august 29,2024</p>
+                  <p class="font-encode text-[12px] font-semibold text-center content-center uppercase">august 29, 2024</p>
                 </div>
               </div>
               <h1 class="line-clamp-2">
-                <a href="#" class="text-md font-bold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500">
+                <a href="#" class="font-lora text-md font-bold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500">
                   Emirates Palace Spends that a Hefty Sum For Emirates Palace
                   Spends that a Hefty Sum ForEmirates Palace Spends that a Hefty
                   Sum ForEmirates Palace Spends that a Hefty Sum ForEmirates
                   Palace Spends that a Hefty Sum For
                 </a>
-              </h1 class="line-clamp-2">
+              </h1>
              </div>
 
             </div>
@@ -679,8 +839,8 @@
               <!-- blog detail -->
              <div class="">
               <div class="flex gap-2 pb-4">
-                <div class="text-[12px] font-bold text-pink-700 uppercase">fashion</div>
-                <div class="flex gap-1">
+                <div class="text-[12px] font-semibold text-center content-center text-pink-700 uppercase">fashion</div>
+                <div class="flex gap-1 fill-gray-500 text-gray-500">
                   <svg
                   xmlns="http://www.w3.org/2000/svg"                  
                   viewBox="0 -960 960 960"
@@ -692,17 +852,17 @@
                   />
                   </svg>
 
-                  <p class="text-[12px] font-bold uppercase">august 29,2024</p>
+                  <p class="font-encode text-[12px] font-semibold text-center content-center uppercase">august 29, 2024</p>
                 </div>
               </div>
               <h1 class="line-clamp-2">
-                <a href="#" class="text-md font-bold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500">
+                <a href="#" class="font-lora text-md font-bold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500">
                   Emirates Palace Spends that a Hefty Sum For Emirates Palace
                   Spends that a Hefty Sum ForEmirates Palace Spends that a Hefty
                   Sum ForEmirates Palace Spends that a Hefty Sum ForEmirates
                   Palace Spends that a Hefty Sum For
                 </a>
-              </h1 class="line-clamp-2">
+              </h1>
              </div>
 
             </div>     
@@ -720,8 +880,8 @@
               <!-- blog detail -->
              <div class="">
               <div class="flex gap-2 pb-4">
-                <div class="text-[12px] font-bold text-teal-600 uppercase">interview</div>
-                <div class="flex gap-1">
+                <div class="text-[12px] font-semibold text-center content-center text-teal-600 uppercase">interview</div>
+                <div class="flex gap-1 fill-gray-500 text-gray-500">
                   <svg
                   xmlns="http://www.w3.org/2000/svg"                  
                   viewBox="0 -960 960 960"
@@ -733,17 +893,17 @@
                   />
                   </svg>
 
-                  <p class="text-[12px] font-bold uppercase">august 29,2024</p>
+                  <p class="font-encode text-[12px] font-semibold text-center content-center uppercase">august 29, 2024</p>
                 </div>
               </div>
               <h1 class="line-clamp-2">
-                <a href="#" class="text-md font-bold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500">
+                <a href="#" class="font-lora text-md font-bold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500">
                   Emirates Palace Spends that a Hefty Sum For Emirates Palace
                   Spends that a Hefty Sum ForEmirates Palace Spends that a Hefty
                   Sum ForEmirates Palace Spends that a Hefty Sum ForEmirates
                   Palace Spends that a Hefty Sum For
                 </a>
-              </h1 class="line-clamp-2">
+              </h1>
              </div>
 
             </div>
@@ -761,8 +921,8 @@
               <!-- blog detail -->
              <div class="">
               <div class="flex gap-2 pb-4">
-                <div class="text-[12px] font-bold text-teal-700 uppercase">education</div>
-                <div class="flex gap-1">
+                <div class="text-[12px] font-semibold text-center content-center text-teal-700 uppercase">education</div>
+                <div class="flex gap-1 fill-gray-500 text-gray-500">
                   <svg
                   xmlns="http://www.w3.org/2000/svg"                  
                   viewBox="0 -960 960 960"
@@ -774,17 +934,17 @@
                   />
                   </svg>
 
-                  <p class="text-[12px] font-bold uppercase">august 29,2024</p>
+                  <p class="font-encode text-[12px] font-semibold text-center content-center uppercase">august 29, 2024</p>
                 </div>
               </div>
               <h1 class="line-clamp-2">
-                <a href="#" class="text-md font-bold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500">
+                <a href="#" class="font-lora text-md font-bold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500">
                   Emirates Palace Spends that a Hefty Sum For Emirates Palace
                   Spends that a Hefty Sum ForEmirates Palace Spends that a Hefty
                   Sum ForEmirates Palace Spends that a Hefty Sum ForEmirates
                   Palace Spends that a Hefty Sum For
                 </a>
-              </h1 class="line-clamp-2">
+              </h1>
              </div>
 
             </div>        
@@ -793,7 +953,7 @@
 
           <!-- popular tag -->
           <div class="tag flex flex-col gap-4 ">
-            <div class="h-10 relative ">
+            <div class="font-lora h-10 relative ">
               <div class="absolute top-4 w-full h-[2px] bg-gray-300 "></div>
               <h2 class="absolute left-6 px-3 text-2xl font-bold capitalize bg-white ">popular tags</h2>
             </div>
@@ -823,328 +983,328 @@
           </div>
          </div>
       </div>
-    </div>
+    </section>
 
     <!-- Footer -->
-     <div class="border-b border-gray-300">
-       <div class="max-body grid grid-flow-col gap-10 pb-14">
-   
-         <!-- info -->
-         <div class=" ">
-           <img
-           class="logo-black"
-           src="./benqu/logo/logo-news.png"
-           alt="logo"
-           class="size-10"
-           />
-           <div class="flex flex-col gap-4 pt-5 ">
-           <p>
-             There are many variations of the majority alteration in that some
-             slightly believable.
-           </p>
-           <div class="flex gap-1">
-             <svg
-               width="14"
-               viewBox="0 0 24 24"
-               fill="none"
-               xmlns="http://www.w3.org/2000/svg"
-             >
-               <g clipPath="url(#clip0_406_1953)">
-                 <path
-                   d="M11.9999 0.0424805C9.35386 0.0453916 6.817 1.09776 4.94586 2.96871C3.07472 4.83966 2.0221 7.37642 2.01892 10.0225C2.01892 12.5925 4.00892 16.6145 7.93392 21.9765C8.40118 22.6166 9.01298 23.1374 9.71952 23.4964C10.4261 23.8554 11.2074 24.0425 11.9999 24.0425C12.7924 24.0425 13.5738 23.8554 14.2803 23.4964C14.9869 23.1374 15.5987 22.6166 16.0659 21.9765C19.9909 16.6145 21.9809 12.5925 21.9809 10.0225C21.9777 7.37642 20.9251 4.83966 19.054 2.96871C17.1828 1.09776 14.646 0.0453916 11.9999 0.0424805ZM11.9999 14.0005C11.2088 14.0005 10.4354 13.7659 9.77764 13.3264C9.11984 12.8868 8.60715 12.2621 8.3044 11.5312C8.00165 10.8003 7.92244 9.99605 8.07678 9.22012C8.23112 8.4442 8.61208 7.73146 9.17149 7.17205C9.7309 6.61264 10.4436 6.23168 11.2196 6.07734C11.9955 5.923 12.7998 6.00221 13.5307 6.30496C14.2616 6.60771 14.8863 7.1204 15.3258 7.7782C15.7653 8.436 15.9999 9.20936 15.9999 10.0005C15.9999 11.0613 15.5785 12.0788 14.8283 12.8289C14.0782 13.5791 13.0608 14.0005 11.9999 14.0005Z"
-                   fill="#374957"
-                 />
-               </g>
-               <defs>
-                 <clipPath id="clip0_406_1953">
-                   <rect width="24" height="24" fill="white" />
-                 </clipPath>
-               </defs>
-             </svg>
-     
-             <p>15 Cliff St, New York 10038, USA</p>
-           </div>
-           <div class="flex gap-1">
-             <svg
-               width="14"
-               viewBox="0 0 24 24"
-               fill="none"
-               xmlns="http://www.w3.org/2000/svg"
-             >
-               <g clipPath="url(#clip0_405_1448)">
-                 <path
-                   d="M17.5 24C9.35101 24.229 -5.07499 9.787 1.86201 1.938C1.88701 1.914 2.95401 0.984 2.95401 0.984C3.62368 0.364944 4.5042 0.024539 5.41613 0.032157C6.32807 0.039775 7.20278 0.394843 7.86201 1.025L10.014 3.343C10.6479 4.00548 10.9985 4.88905 10.9912 5.80592C10.9839 6.72279 10.6194 7.60068 9.97501 8.253L9.58701 8.647C10.7425 11.2059 12.787 13.2588 15.341 14.425L15.752 14.025C16.4186 13.3901 17.3039 13.036 18.2245 13.036C19.1451 13.036 20.0304 13.3901 20.697 14.025L22.934 16.1C23.5966 16.7473 23.977 17.63 23.9923 18.5561C24.0077 19.4823 23.6568 20.3771 23.016 21.046C23.016 21.046 22.086 22.112 22.062 22.137C21.4628 22.734 20.7509 23.2061 19.9678 23.5259C19.1847 23.8457 18.3459 24.0069 17.5 24ZM3.95001 4.1C-0.908989 10.118 14.644 24.773 19.905 20.05C19.905 20.05 20.829 18.991 20.854 18.967C20.9477 18.8732 21.0004 18.7461 21.0004 18.6135C21.0004 18.4809 20.9477 18.3538 20.854 18.26L18.616 16.186C18.316 15.936 18.147 15.933 17.869 16.146L16.733 17.264C16.5281 17.4656 16.2696 17.604 15.9882 17.6629C15.7069 17.7218 15.4145 17.6985 15.146 17.596C13.1506 16.8535 11.3382 15.6906 9.83164 14.1863C8.32505 12.6819 7.15951 10.8713 6.41401 8.877C6.30551 8.60629 6.27827 8.30982 6.33564 8.02388C6.393 7.73793 6.53249 7.47491 6.73701 7.267L7.84501 6.141C7.89547 6.09618 7.93602 6.04132 7.96406 5.97993C7.99211 5.91854 8.00703 5.85197 8.00788 5.78449C8.00872 5.717 7.99548 5.65008 7.96898 5.58801C7.94249 5.52594 7.90333 5.47008 7.85401 5.424L5.70001 3.106C5.6047 3.02635 5.48256 2.98613 5.35857 2.99356C5.23458 3.001 5.11812 3.05553 5.03301 3.146C5.00901 3.171 3.95001 4.1 3.95001 4.1ZM24 9.5C23.9971 6.98134 22.9953 4.56667 21.2143 2.7857C19.4333 1.00474 17.0187 0.00291129 14.5 0C14.1022 0 13.7207 0.158035 13.4394 0.43934C13.158 0.720644 13 1.10218 13 1.5C13 1.89783 13.158 2.27936 13.4394 2.56066C13.7207 2.84196 14.1022 3 14.5 3C16.2233 3.00212 17.8753 3.68762 19.0939 4.90614C20.3124 6.12467 20.9979 7.77674 21 9.5C21 9.89783 21.158 10.2794 21.4394 10.5607C21.7207 10.842 22.1022 11 22.5 11C22.8978 11 23.2794 10.842 23.5607 10.5607C23.842 10.2794 24 9.89783 24 9.5ZM19 9.5C18.9987 8.30693 18.5242 7.16311 17.6805 6.31948C16.8369 5.47585 15.6931 5.00132 14.5 5C14.1022 5 13.7207 5.15804 13.4394 5.43934C13.158 5.72064 13 6.10218 13 6.5C13 6.89783 13.158 7.27936 13.4394 7.56066C13.7207 7.84197 14.1022 8 14.5 8C14.8978 8 15.2794 8.15804 15.5607 8.43934C15.842 8.72064 16 9.10218 16 9.5C16 9.89783 16.158 10.2794 16.4394 10.5607C16.7207 10.842 17.1022 11 17.5 11C17.8978 11 18.2794 10.842 18.5607 10.5607C18.842 10.2794 19 9.89783 19 9.5Z"
-                   fill="#374957"
-                 />
-               </g>
-               <defs>
-                 <clipPath id="clip0_405_1448">
-                   <rect width="24" height="24" fill="white" />
-                 </clipPath>
-               </defs>
-             </svg>
-     
-             <p>+1819-602-9641</p>
-           </div>
-           <div class="flex gap-1">
-             <svg
-               width="14"
-               viewBox="0 0 24 24"
-               fill="none"
-               xmlns="http://www.w3.org/2000/svg"
-             >
-               <g clipPath="url(#clip0_406_2075)">
-                 <path
-                   d="M23.954 5.54187L15.536 13.9599C14.5974 14.8961 13.3257 15.4219 12 15.4219C10.6743 15.4219 9.40263 14.8961 8.464 13.9599L0.046 5.54187C0.032 5.69987 0 5.84287 0 5.99987V17.9999C0.00158786 19.3255 0.528882 20.5963 1.46622 21.5337C2.40356 22.471 3.67441 22.9983 5 22.9999h1 class="line-clamp-2"9C20.3256 22.9983 21.5964 22.471 22.5338 21.5337C23.4711 20.5963 23.9984 19.3255 24 17.9999V5.99987C24 5.84287 23.968 5.69987 23.954 5.54187Z"
-                   fill="#374957"
-                 />
-                 <path
-                   d="M14.122 12.5459L23.256 3.41088C22.8135 2.6772 22.1895 2.06992 21.444 1.64761C20.6985 1.2253 19.8568 1.00222 19 0.999878H5.00002C4.14324 1.00222 3.30152 1.2253 2.55605 1.64761C1.81057 2.06992 1.1865 2.6772 0.744019 3.41088L9.87802 12.5459C10.4416 13.1072 11.2046 13.4223 12 13.4223C12.7954 13.4223 13.5584 13.1072 14.122 12.5459Z"
-                   fill="#374957"
-                 />
-               </g>
-               <defs>
-                 <clipPath id="clip0_406_2075">
-                   <rect width="24" height="24" fill="white" />
-                 </clipPath>
-               </defs>
-             </svg>
-             <p>info@example.com</p>
-           </div>
-   
-             </div>
-   
-         </div>
-   
-         <!-- useful link -->         
-         <ul class="flex flex-col gap-5">
-           <h2 class="text-2xl font-bold capitalize">useful links</h2>
-           <li class="hover:text-red-600 capitalize duration-300"><span class="font-bold">|</span> <a href="#">blog index</a></li>
-           <li class="hover:text-red-600 capitalize duration-300"><span class="font-bold">|</span> <a href="#">company about</a></li>
-           <li class="hover:text-red-600 capitalize duration-300"><span class="font-bold">|</span> <a href="#">contact with us</a></li>
-           <li class="hover:text-red-600 capitalize duration-300"><span class="font-bold">|</span> <a href="#">health tips</a></li>
-           <li class="hover:text-red-600 capitalize duration-300"><span class="font-bold">|</span> <a href="#">bussiness & talkshow</a></li>
-           <li class="hover:text-red-600 capitalize duration-300"><span class="font-bold">|</span> <a href="#">top interview</a></li>
-           <li class="hover:text-red-600 capitalize duration-300"><span class="font-bold">|</span> <a href="#">education & tech</a></li>
-         </ul>
-         
-         <!-- popular post -->
-         <div class="flex flex-col gap-5">
-           <h2 class="text-2xl font-bold capitalize">popular blogs</h2>
-           <!-- 1 -->
-           <div class="cursor-pointer group flex gap-4">
-             <div class="overflow-hidden flex-none rounded-[8px]">
-               <img
-               src="./benqu/img/business.jpg"
-               class="group-hover:scale-110 w-[110px] h-[90px] object-cover rounded-[8px] object-cover  duration-500"
-   
-             />
-   
-             </div>
-   
-             <!-- blog detail -->
-            <div class="">
-             <div class="flex gap-2 ">
-               <div class="text-[12px] font-bold text-center content-center text-yellow-600 uppercase">business</div>
-               <span class=" text-center content-center">|</span>
-               <div class="flex gap-1">
-                 <svg
-                 xmlns="http://www.w3.org/2000/svg"                  
-                 viewBox="0 -960 960 960"
-                 class=" w-[18px] "
-   
-                 >
-                 <path
-                 d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Z"
-                 />
-                 </svg>
-   
-                 <p class="text-[12px] font-bold uppercase">august 29,2024</p>
-               </div>
-             </div>
-             <h1 class="line-clamp-2">
-               <a href="#" class="text-md font-bold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500">
-                 Emirates Palace Spends that a Hefty Sum For Emirates Palace
-                 Spends that a Hefty Sum ForEmirates Palace Spends that a Hefty
-                 Sum ForEmirates Palace Spends that a Hefty Sum ForEmirates
-                 Palace Spends that a Hefty Sum For
-               </a>
-             </h1 class="line-clamp-2">
+     <footer class="">
+       <div class=" border-b border-gray-300">
+          <div class=" grid grid-flow-row mx-4 gap-10 pb-14 md:mx-8 lg:mx-10 lg:grid-cols-[auto_auto] xl:grid-cols-[auto_auto_auto_auto] ">
+      
+            <!-- info -->
+            <div class=" ">
+              <img
+              class="logo-black"
+              src="./benqu/logo/logo-news.png"
+              alt="logo"
+              class="size-10"
+              />
+              <div class="flex flex-col gap-4 pt-5 ">
+              <p class="font-encode">
+                There are many variations of the majority alteration in that some
+                slightly believable.
+              </p>
+              <div class="flex gap-1 fill-gray-500 font-encode text-sm">
+                <svg
+                  width="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clipPath="url(#clip0_406_1953)">
+                    <path
+                      d="M11.9999 0.0424805C9.35386 0.0453916 6.817 1.09776 4.94586 2.96871C3.07472 4.83966 2.0221 7.37642 2.01892 10.0225C2.01892 12.5925 4.00892 16.6145 7.93392 21.9765C8.40118 22.6166 9.01298 23.1374 9.71952 23.4964C10.4261 23.8554 11.2074 24.0425 11.9999 24.0425C12.7924 24.0425 13.5738 23.8554 14.2803 23.4964C14.9869 23.1374 15.5987 22.6166 16.0659 21.9765C19.9909 16.6145 21.9809 12.5925 21.9809 10.0225C21.9777 7.37642 20.9251 4.83966 19.054 2.96871C17.1828 1.09776 14.646 0.0453916 11.9999 0.0424805ZM11.9999 14.0005C11.2088 14.0005 10.4354 13.7659 9.77764 13.3264C9.11984 12.8868 8.60715 12.2621 8.3044 11.5312C8.00165 10.8003 7.92244 9.99605 8.07678 9.22012C8.23112 8.4442 8.61208 7.73146 9.17149 7.17205C9.7309 6.61264 10.4436 6.23168 11.2196 6.07734C11.9955 5.923 12.7998 6.00221 13.5307 6.30496C14.2616 6.60771 14.8863 7.1204 15.3258 7.7782C15.7653 8.436 15.9999 9.20936 15.9999 10.0005C15.9999 11.0613 15.5785 12.0788 14.8283 12.8289C14.0782 13.5791 13.0608 14.0005 11.9999 14.0005Z"
+                      fill="#374957"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_406_1953">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+        
+                <p>15 Cliff St, New York 10038, USA</p>
+              </div>
+              <div class="flex gap-1 fill-gray-500 font-encode text-sm">
+                <svg
+                  width="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clipPath="url(#clip0_405_1448)">
+                    <path
+                      d="M17.5 24C9.35101 24.229 -5.07499 9.787 1.86201 1.938C1.88701 1.914 2.95401 0.984 2.95401 0.984C3.62368 0.364944 4.5042 0.024539 5.41613 0.032157C6.32807 0.039775 7.20278 0.394843 7.86201 1.025L10.014 3.343C10.6479 4.00548 10.9985 4.88905 10.9912 5.80592C10.9839 6.72279 10.6194 7.60068 9.97501 8.253L9.58701 8.647C10.7425 11.2059 12.787 13.2588 15.341 14.425L15.752 14.025C16.4186 13.3901 17.3039 13.036 18.2245 13.036C19.1451 13.036 20.0304 13.3901 20.697 14.025L22.934 16.1C23.5966 16.7473 23.977 17.63 23.9923 18.5561C24.0077 19.4823 23.6568 20.3771 23.016 21.046C23.016 21.046 22.086 22.112 22.062 22.137C21.4628 22.734 20.7509 23.2061 19.9678 23.5259C19.1847 23.8457 18.3459 24.0069 17.5 24ZM3.95001 4.1C-0.908989 10.118 14.644 24.773 19.905 20.05C19.905 20.05 20.829 18.991 20.854 18.967C20.9477 18.8732 21.0004 18.7461 21.0004 18.6135C21.0004 18.4809 20.9477 18.3538 20.854 18.26L18.616 16.186C18.316 15.936 18.147 15.933 17.869 16.146L16.733 17.264C16.5281 17.4656 16.2696 17.604 15.9882 17.6629C15.7069 17.7218 15.4145 17.6985 15.146 17.596C13.1506 16.8535 11.3382 15.6906 9.83164 14.1863C8.32505 12.6819 7.15951 10.8713 6.41401 8.877C6.30551 8.60629 6.27827 8.30982 6.33564 8.02388C6.393 7.73793 6.53249 7.47491 6.73701 7.267L7.84501 6.141C7.89547 6.09618 7.93602 6.04132 7.96406 5.97993C7.99211 5.91854 8.00703 5.85197 8.00788 5.78449C8.00872 5.717 7.99548 5.65008 7.96898 5.58801C7.94249 5.52594 7.90333 5.47008 7.85401 5.424L5.70001 3.106C5.6047 3.02635 5.48256 2.98613 5.35857 2.99356C5.23458 3.001 5.11812 3.05553 5.03301 3.146C5.00901 3.171 3.95001 4.1 3.95001 4.1ZM24 9.5C23.9971 6.98134 22.9953 4.56667 21.2143 2.7857C19.4333 1.00474 17.0187 0.00291129 14.5 0C14.1022 0 13.7207 0.158035 13.4394 0.43934C13.158 0.720644 13 1.10218 13 1.5C13 1.89783 13.158 2.27936 13.4394 2.56066C13.7207 2.84196 14.1022 3 14.5 3C16.2233 3.00212 17.8753 3.68762 19.0939 4.90614C20.3124 6.12467 20.9979 7.77674 21 9.5C21 9.89783 21.158 10.2794 21.4394 10.5607C21.7207 10.842 22.1022 11 22.5 11C22.8978 11 23.2794 10.842 23.5607 10.5607C23.842 10.2794 24 9.89783 24 9.5ZM19 9.5C18.9987 8.30693 18.5242 7.16311 17.6805 6.31948C16.8369 5.47585 15.6931 5.00132 14.5 5C14.1022 5 13.7207 5.15804 13.4394 5.43934C13.158 5.72064 13 6.10218 13 6.5C13 6.89783 13.158 7.27936 13.4394 7.56066C13.7207 7.84197 14.1022 8 14.5 8C14.8978 8 15.2794 8.15804 15.5607 8.43934C15.842 8.72064 16 9.10218 16 9.5C16 9.89783 16.158 10.2794 16.4394 10.5607C16.7207 10.842 17.1022 11 17.5 11C17.8978 11 18.2794 10.842 18.5607 10.5607C18.842 10.2794 19 9.89783 19 9.5Z"
+                      fill="#374957"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_405_1448">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+        
+                <p>+1819-602-9641</p>
+              </div>
+              <div class="flex gap-1 fill-gray-500 font-encode text-sm">
+                <svg
+                  width="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clipPath="url(#clip0_406_2075)">
+                    <path
+                      d="M23.954 5.54187L15.536 13.9599C14.5974 14.8961 13.3257 15.4219 12 15.4219C10.6743 15.4219 9.40263 14.8961 8.464 13.9599L0.046 5.54187C0.032 5.69987 0 5.84287 0 5.99987V17.9999C0.00158786 19.3255 0.528882 20.5963 1.46622 21.5337C2.40356 22.471 3.67441 22.9983 5 22.9999h1 class="line-clamp-2"9C20.3256 22.9983 21.5964 22.471 22.5338 21.5337C23.4711 20.5963 23.9984 19.3255 24 17.9999V5.99987C24 5.84287 23.968 5.69987 23.954 5.54187Z"
+                      fill="#374957"
+                    />
+                    <path
+                      d="M14.122 12.5459L23.256 3.41088C22.8135 2.6772 22.1895 2.06992 21.444 1.64761C20.6985 1.2253 19.8568 1.00222 19 0.999878H5.00002C4.14324 1.00222 3.30152 1.2253 2.55605 1.64761C1.81057 2.06992 1.1865 2.6772 0.744019 3.41088L9.87802 12.5459C10.4416 13.1072 11.2046 13.4223 12 13.4223C12.7954 13.4223 13.5584 13.1072 14.122 12.5459Z"
+                      fill="#374957"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_406_2075">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <p>info@example.com</p>
+              </div>
+      
+                </div>
+      
             </div>
-   
-           </div>
-   
-           <!-- 2 -->
-           <div class="cursor-pointer group flex gap-4">
-             <div class="overflow-hidden flex-none rounded-[8px]">
-               <img
-               src="./benqu/img/business.jpg"
-               class="group-hover:scale-110 w-[110px] h-[90px] object-cover rounded-[8px] object-cover  duration-500"
-   
-             />
-   
-             </div>
-   
-             <!-- blog detail -->
-            <div class="">
-             <div class="flex gap-2 ">
-               <div class="text-[12px] font-bold text-center content-center text-yellow-600 uppercase">business</div>
-               <span class=" text-center content-center">|</span>
-               <div class="flex gap-1">
-                 <svg
-                 xmlns="http://www.w3.org/2000/svg"                  
-                 viewBox="0 -960 960 960"
-                 class=" w-[18px] "
-   
-                 >
-                 <path
-                 d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Z"
+      
+            <!-- useful link -->         
+            <ul class="flex flex-col gap-5">
+              <h2 class="font-encode text-2xl font-bold capitalize">useful links</h2>
+              <li class="hover:text-red-600 capitalize duration-300"><span class="font-bold">|</span> <a href="#">blog index</a></li>
+              <li class="hover:text-red-600 capitalize duration-300"><span class="font-bold">|</span> <a href="#">company about</a></li>
+              <li class="hover:text-red-600 capitalize duration-300"><span class="font-bold">|</span> <a href="#">contact with us</a></li>
+              <li class="hover:text-red-600 capitalize duration-300"><span class="font-bold">|</span> <a href="#">health tips</a></li>
+              <li class="hover:text-red-600 capitalize duration-300"><span class="font-bold">|</span> <a href="#">bussiness & talkshow</a></li>
+              <li class="hover:text-red-600 capitalize duration-300"><span class="font-bold">|</span> <a href="#">top interview</a></li>
+              <li class="hover:text-red-600 capitalize duration-300"><span class="font-bold">|</span> <a href="#">education & tech</a></li>
+            </ul>
+            
+            <!-- popular post -->
+            <div class="flex flex-col gap-5">
+              <h2 class="font-encode text-2xl font-bold capitalize">popular blogs</h2>
+               <!-- 1-blog-post-bussiness -->
+               <div class="cursor-pointer group flex gap-4">
+                 <div class="overflow-hidden flex-none rounded-[8px]">
+                   <img
+                   src="./benqu/img/business.jpg"
+                   class="group-hover:scale-110 w-[110px] h-[90px] object-cover  duration-500"
                  />
-                 </svg>
    
-                 <p class="text-[12px] font-bold uppercase">august 29,2024</p>
+                 </div>
+   
+                 <!-- blog detail -->
+                <div class="">
+                 <div class="flex gap-2 pb-4">
+                   <div class="text-[12px] font-semibold text-center content-center text-center content-center text-yellow-600 uppercase">business</div>
+                   <span class="text-center content-center text-gray-200">|</span>
+                   <div class="flex gap-1 fill-gray-500 text-gray-500">
+                     <svg
+                     xmlns="http://www.w3.org/2000/svg"                  
+                     viewBox="0 -960 960 960"
+                     class=" w-[18px] "
+   
+                     >
+                     <path
+                     d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Z"
+                     />
+                     </svg>
+   
+                     <p class="font-encode text-[12px] font-semibold text-center content-center uppercase">august 29, 2024</p>
+                   </div>
+                 </div>
+                 <h1 class="line-clamp-2">
+                   <a href="#" class="font-encode text-md font-semibold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500">
+                     Emirates Palace Spends that a Hefty Sum For Emirates Palace
+                     Spends that a Hefty Sum ForEmirates Palace Spends that a Hefty
+                     Sum ForEmirates Palace Spends that a Hefty Sum ForEmirates
+                     Palace Spends that a Hefty Sum For
+                   </a>
+                 </h1>
+                </div>
+   
                </div>
-             </div>
-             <h1 class="line-clamp-2">
-               <a href="#" class="text-md font-bold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500">
-                 Emirates Palace Spends that a Hefty Sum For Emirates Palace
-                 Spends that a Hefty Sum ForEmirates Palace Spends that a Hefty
-                 Sum ForEmirates Palace Spends that a Hefty Sum ForEmirates
-                 Palace Spends that a Hefty Sum For
-               </a>
-             </h1 class="line-clamp-2">
-            </div>
-   
-           </div>     
-           
-           <!-- 3 -->
-           <div class="cursor-pointer group flex gap-4">
-             <div class="overflow-hidden flex-none rounded-[8px]">
-               <img
-               src="./benqu/img/business.jpg"
-               class="group-hover:scale-110 w-[110px] h-[90px] object-cover rounded-[8px] object-cover  duration-500"
-   
-             />
-   
-             </div>
-   
-             <!-- blog detail -->
-            <div class="">
-             <div class="flex gap-2 ">
-               <div class="text-[12px] font-bold text-center content-center text-yellow-600 uppercase">business</div>
-               <span class=" text-center content-center">|</span>
-               <div class="flex gap-1">
-                 <svg
-                 xmlns="http://www.w3.org/2000/svg"                  
-                 viewBox="0 -960 960 960"
-                 class=" w-[18px] "
-   
-                 >
-                 <path
-                 d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Z"
+               
+               <!-- 2-blog-post-fashion -->
+               <div class="cursor-pointer group flex gap-4">
+                 <div class="overflow-hidden flex-none rounded-[8px]">
+                   <img
+                   src="./benqu/img/news-2.jpg"
+                   class="group-hover:scale-110 w-[110px] h-[90px] object-cover  duration-500"
                  />
-                 </svg>
    
-                 <p class="text-[12px] font-bold uppercase">august 29,2024</p>
-               </div>
-             </div>
-             <h1 class="line-clamp-2">
-               <a href="#" class="text-md font-bold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500">
-                 Emirates Palace Spends that a Hefty Sum For Emirates Palace
-                 Spends that a Hefty Sum ForEmirates Palace Spends that a Hefty
-                 Sum ForEmirates Palace Spends that a Hefty Sum ForEmirates
-                 Palace Spends that a Hefty Sum For
-               </a>
-             </h1 class="line-clamp-2">
-            </div>
+                 </div>
    
-           </div>
+                 <!-- blog detail -->
+                <div class="">
+                 <div class="flex gap-2 pb-4">
+                   <div class="text-[12px] font-semibold text-center content-center text-pink-700 uppercase">fashion</div>
+                   <span class="text-center content-center text-gray-200">|</span>
    
-           <!-- 4 -->
-           <div class="cursor-pointer group flex gap-4">
-             <div class="overflow-hidden flex-none rounded-[8px]">
-               <img
-               src="./benqu/img/business.jpg"
-               class="group-hover:scale-110 w-[110px] h-[90px] object-cover rounded-[8px] object-cover  duration-500"
+                   <div class="flex gap-1 fill-gray-500 text-gray-500">
+                     <svg
+                     xmlns="http://www.w3.org/2000/svg"                  
+                     viewBox="0 -960 960 960"
+                     class=" w-[18px] "
    
-             />
+                     >
+                     <path
+                     d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Z"
+                     />
+                     </svg>
    
-             </div>
+                     <p class="font-encode text-[12px] font-semibold text-center content-center uppercase">august 29, 2024</p>
+                   </div>
+                 </div>
+                 <h1 class="line-clamp-2">
+                   <a href="#" class="font-encode text-md font-semibold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500">
+                     Emirates Palace Spends that a Hefty Sum For Emirates Palace
+                     Spends that a Hefty Sum ForEmirates Palace Spends that a Hefty
+                     Sum ForEmirates Palace Spends that a Hefty Sum ForEmirates
+                     Palace Spends that a Hefty Sum For
+                   </a>
+                 </h1>
+                </div>
    
-             <!-- blog detail -->
-            <div class="">
-             <div class="flex gap-2 ">
-               <div class="text-[12px] font-bold text-center content-center text-yellow-600 uppercase">business</div>
-               <span class=" text-center content-center">|</span>
-               <div class="flex gap-1">
-                 <svg
-                 xmlns="http://www.w3.org/2000/svg"                  
-                 viewBox="0 -960 960 960"
-                 class=" w-[18px] "
-   
-                 >
-                 <path
-                 d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Z"
+               </div>     
+               
+               <!-- 3-blog-post-interview -->
+               <div class="cursor-pointer group flex gap-4">
+                 <div class="overflow-hidden flex-none rounded-[8px]">
+                   <img
+                   src="./benqu/img/news-3.jpg"
+                   class="group-hover:scale-110 w-[110px] h-[90px] object-cover  duration-500"
                  />
-                 </svg>
    
-                 <p class="text-[12px] font-bold uppercase">august 29,2024</p>
+                 </div>
+   
+                 <!-- blog detail -->
+                <div class="">
+                 <div class="flex gap-2 pb-4">
+                   <div class="text-[12px] font-semibold text-center content-center text-teal-600 uppercase">interview</div>
+                   <span class="text-center content-center text-gray-200">|</span>
+   
+                   <div class="flex gap-1 fill-gray-500 text-gray-500">
+                     <svg
+                     xmlns="http://www.w3.org/2000/svg"                  
+                     viewBox="0 -960 960 960"
+                     class=" w-[18px] "
+   
+                     >
+                     <path
+                     d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Z"
+                     />
+                     </svg>
+   
+                     <p class="font-encode text-[12px] font-semibold text-center content-center uppercase">august 29, 2024</p>
+                   </div>
+                 </div>
+                 <h1 class="line-clamp-2">
+                   <a href="#" class="font-encode text-md font-semibold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500">
+                     Emirates Palace Spends that a Hefty Sum For Emirates Palace
+                     Spends that a Hefty Sum ForEmirates Palace Spends that a Hefty
+                     Sum ForEmirates Palace Spends that a Hefty Sum ForEmirates
+                     Palace Spends that a Hefty Sum For
+                   </a>
+                 </h1>
+                </div>
+   
                </div>
-             </div>
-             <h1 class="line-clamp-2">
-               <a href="#" class="text-md font-bold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500">
-                 Emirates Palace Spends that a Hefty Sum For Emirates Palace
-                 Spends that a Hefty Sum ForEmirates Palace Spends that a Hefty
-                 Sum ForEmirates Palace Spends that a Hefty Sum ForEmirates
-                 Palace Spends that a Hefty Sum For
-               </a>
-             </h1 class="line-clamp-2">
+   
+               <!-- 4-blog-post-edu -->
+               <div class="cursor-pointer group flex gap-4">
+                 <div class="overflow-hidden flex-none rounded-[8px]">
+                   <img
+                   src="./benqu/img/news-4.jpg"
+                   class="group-hover:scale-110 w-[110px] h-[90px] object-cover  duration-500"
+                 />
+   
+                 </div>
+   
+                 <!-- blog detail -->
+                <div class="">
+                 <div class="flex gap-2 pb-4">
+                   <div class="text-[12px] font-semibold text-center content-center text-teal-700 uppercase">education</div>
+                   <span class="text-center content-center text-gray-200">|</span>
+                   <div class="flex gap-1 fill-gray-500 text-gray-500">
+                     <svg
+                     xmlns="http://www.w3.org/2000/svg"                  
+                     viewBox="0 -960 960 960"
+                     class=" w-[18px] "
+   
+                     >
+                     <path
+                     d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Z"
+                     />
+                     </svg>
+   
+                     <p class="font-encode text-[12px] font-semibold text-center content-center uppercase">august 29, 2024</p>
+                   </div>
+                 </div>
+                 <h1 class="line-clamp-2">
+                   <a href="#" class="font-encode text-md font-semibold bg-gradient-to-r from-black to-black bg-no-repeat bg-left-bottom bg-[length:0%_1px] group-hover:bg-[length:100%_1px] duration-500">
+                     Emirates Palace Spends that a Hefty Sum For Emirates Palace
+                     Spends that a Hefty Sum ForEmirates Palace Spends that a Hefty
+                     Sum ForEmirates Palace Spends that a Hefty Sum ForEmirates
+                     Palace Spends that a Hefty Sum For
+                   </a>
+                 </h1>
+                </div>
+   
+               </div>     
             </div>
-   
-           </div>     
-         </div>
-   
-         <!-- browse tag -->
-         <div class="flex flex-col gap-5">
-           <h2 class="text-2xl font-bold capitalize">browse tags</h2>
-           <div class="flex flex-wrap gap-4">
-             <p class="browse-tag">App (1)</p>
-             <p class="browse-tag">Asia (12)</p>
-             <p class="browse-tag">Design (7)</p>
-             <p class="browse-tag">Fashion (1)</p>
-             <p class="browse-tag">Game (1)</p>
-             <p class="browse-tag">Food (1)</p>
-             <p class="browse-tag">App (1)</p>
-             <p class="browse-tag">Asia (12)</p>
-             <p class="browse-tag">Design (7)</p>
-             <p class="browse-tag">Fashion (1)</p>
-             <p class="browse-tag">Game (1)</p>
-             <p class="browse-tag">Food (1)</p>
-             <p class="browse-tag">App (1)</p>
-             <p class="browse-tag">Asia (12)</p>
-             <p class="browse-tag">Design (7)</p>
-             <p class="browse-tag">Fashion (1)</p>
-             <p class="browse-tag">Game (1)</p>
-             <p class="browse-tag">Food (1)</p>
-           </div>
-         </div>
+      
+            <!-- browse tag -->
+            <div class="flex flex-col gap-5">
+              <h2 class="font-encode text-2xl font-bold capitalize">browse tags</h2>
+              <div class="flex flex-wrap gap-4">
+                <p class="browse-tag">App (1)</p>
+                <p class="browse-tag">Asia (12)</p>
+                <p class="browse-tag">Design (7)</p>
+                <p class="browse-tag">Fashion (1)</p>
+                <p class="browse-tag">Game (1)</p>
+                <p class="browse-tag">Food (1)</p>
+                <p class="browse-tag">App (1)</p>
+                <p class="browse-tag">Asia (12)</p>
+                <p class="browse-tag">Design (7)</p>
+                <p class="browse-tag">Fashion (1)</p>
+                <p class="browse-tag">Game (1)</p>
+                <p class="browse-tag">Food (1)</p>
+                <p class="browse-tag">App (1)</p>
+                <p class="browse-tag">Asia (12)</p>
+                <p class="browse-tag">Design (7)</p>
+                <p class="browse-tag">Fashion (1)</p>
+                <p class="browse-tag">Game (1)</p>
+                <p class="browse-tag">Food (1)</p>
+              </div>
+            </div>
+      
+          </div>
+          
    
        </div>
-       
+       <div class=" flex flex-col gap-4 py-4 mx-4 items-center justify-between font-encode md:flex-row md:mx-8 lg:mx-10">
+         <div class="flex flex-wrap gap-x-4 gap-y-1 justify-center items-center">
+           <p class="cursor-pointer hover:text-red-600 duration-300">Business</p>
+           <p class="cursor-pointer hover:text-red-600 duration-300">Education</p>
+           <p class="cursor-pointer hover:text-red-600 duration-300">Fashion</p>
+           <p class="cursor-pointer hover:text-red-600 duration-300">Healthy</p>
+           <p class="cursor-pointer hover:text-red-600 duration-300">Interview</p>
+         </div>
+         <p class="text-center">© 2024, Benqu All Rights Reserved</p>
+       </div>
 
-     </div>
-    <footer class="max-body">
-      <div class="flex justify-between items-center place-content-center h-20 ">
-        <div class="flex gap-4 ">
-          <p class="cursor-pointer hover:text-red-600 duration-300">Business</p>
-          <p class="cursor-pointer hover:text-red-600 duration-300">Education</p>
-          <p class="cursor-pointer hover:text-red-600 duration-300">Fashion</p>
-          <p class="cursor-pointer hover:text-red-600 duration-300">Healthy</p>
-          <p class="cursor-pointer hover:text-red-600 duration-300">Interview</p>
-        </div>
-        <p class="">© 2024, benqu All Rights Reserved</p>
-      </div>
-    </footer>
+     </footer>
+
 
   </body>
 
